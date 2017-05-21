@@ -18,8 +18,6 @@ bool isPalindrome(string s) {
         }
         s[i] = tolower(s[i]);
         s[j] = tolower(s[j]);
-        cout << i << " " << s[i] << endl;
-        cout << j << " " << s[j] << endl;
         if (i <= j) {
             if (s[i] != s[j]) {
                 return false;
