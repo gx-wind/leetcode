@@ -22,7 +22,6 @@ int maxSubArray(vector<int>& nums) {
 }
 
 int main() {
-    vector<
     return 0;
 }
 
