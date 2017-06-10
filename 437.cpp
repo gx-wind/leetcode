@@ -18,7 +18,7 @@ int depSearch(TreeNode* root, int pre, int& sum) {
         return 0;
     }
     int current = pre + root->val;
-    return (current == sum) + depSearch(root->left, current, sum) + depSearch(root->left, current, sum);
+    return (current == sum) + depSearch(root->left, current, sum) + depSearch(root->right, current, sum);
 }
 
 int pathSum(TreeNode* root, int sum) {
@@ -26,7 +26,7 @@ int pathSum(TreeNode* root, int sum) {
         return 0;
     }
     int pre = 0;
-    return depSearch(root, pre, sum) + pathSum(root->left) + pathSum(root->right);
+    return depSearch(root, pre, sum) + pathSum(root->left,sum) + pathSum(root->right, sum);
 }
 
 int main() {
