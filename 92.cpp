@@ -24,9 +24,8 @@ ListNode* reverseBetween(ListNode* head, int m, int n) {
     while(n--) {
         ListNode *p = start->next;
         start->next = p->next;
-        p->next = start;
+        p->next = pre->next;
         pre->next = p;
-
     }
     return newHead->next;
 }
