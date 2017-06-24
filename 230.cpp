@@ -18,7 +18,6 @@ void dfs(TreeNode* root, int &k, int &res) {
     }
     dfs(root->left, k, res);
     k--;
-    cout << k << " " << root->val << endl;
     if (k == 0) {
         res = root->val;
         return;
@@ -29,7 +28,6 @@ void dfs(TreeNode* root, int &k, int &res) {
 int kthSmallest(TreeNode* root, int k) {
     int res;
     dfs(root, k, res);
-    cout << res << endl;
     return res;
 }
 
