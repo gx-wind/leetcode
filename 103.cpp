@@ -25,7 +25,8 @@ vector<vector<int> > zigzagLevelOrder(TreeNode* root) {
     while (!q.empty()) {
         //vv.push_back(vector<int>(q.size()));
         vector<int> v;
-        for (int i = 0; i < q.size(); i++) {
+        int s = q.size();
+        for (int i = 0; i < s;i++) {
             TreeNode* node = q.front();
             q.pop();
             v.push_back(node->val);
